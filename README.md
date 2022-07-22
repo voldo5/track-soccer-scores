@@ -4,7 +4,7 @@
 #### React, Typescript, antd, Observer pattern, useContext hook.
 > Scoreboard displays the timer, live goals (score) and the history of goals (player number, player name and time of score) on the scoreboard.
 Button Play start the timer.
-When a goal is scored - the score and history to rerender at the same time.
+When a goal is scored - the score and history is rerendered at the same time.
 Goal is scored when we click on button Barselona or button Chelsea and we get at this moment score player name and time from timer for the history of goals.
 
 ![alt](./src/assets/score-board.png)
@@ -14,7 +14,7 @@ https://www.patterns.dev/posts/observer-pattern/
 ## Observer pattern files
 The Observer pattern includes the gameObserver.tsx module as Subject (or Observable) and two modules GameScore.tsx and GoalHistory.tsx as observers.
 
-> gameObserver.ts
+**gameObserver.ts**
 >Module gameObserver.ts is a Subject in Observer pattern.
 >Here we can register (add) callback functions from components GameScore and GoalHistory to listeners array. We can attach, detach and notify the callback functions in listeners array.
 
@@ -50,7 +50,7 @@ const gameSubject = new GameSubject();
 
 export default gameSubject;
 ```
-> gameScore.tsx
+**gameScore.tsx**
 >The GameScore.tsx is observer component and responsible for render of match score.
 >We add onGoalScored function from  GameScore.tsx component to listeners array(game.attach(dispatch as GoalListener)) in the Subject conponent. This function updates the state "score" of the component and re-renders the component when goal event happened.
 
@@ -92,9 +92,10 @@ export const GameScore: React.FC = () => {
     );
 }
 ```
+**GoalHistory.tsx**
 >The GoalHistory.tsx is observer component and responsible for render of the list of scored players.
 >We add onGoalScored function from  GoalHistory.tsx component to listeners array (game.attach(onGoalScored)) in the Subject component. This function updates the list of scored players and re-renders the component when goal event happened.
-**GoalHistory.tsx**
+
 ```js
 import React, { useEffect, useState } from "react";
 import { Team } from "../interface";
@@ -171,9 +172,9 @@ export const GoalHistory: React.FC<GoalHistoryProps> = ({ teamThatScored }) => {
 ```
 ## Context pattern
 We use the Context pattern to get the time point from the Timer when the goal button is clicked. 
+**gameContext.ts**
 > In module gameContext.ts we define our context under the name gameContext() and type GameContextProps.
 
-**gameContext.ts**
 ```js
 import React from "react";
 
@@ -186,9 +187,8 @@ export type GameContextProps = {
 
 export const GameContext = React.createContext<GameContextProps>({} as GameContextProps);
 ```
-> In Timer module we get old value of parameter count from our GameContext() and update it using function setCount().
-
 **Timer.tsx**
+> In Timer module we get old value of parameter count from our GameContext() and update it using function setCount().
 ```js
 import React from "react";
 import useInterval from "../hooks/useInterval";
