@@ -2,6 +2,10 @@
 
 git remote add origin https://github.com/voldo5/track-soccer-scores.git
 
+git add .
+git commit -m "Configure React app for deployment to GitHub Pages"
+git push origin master
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
