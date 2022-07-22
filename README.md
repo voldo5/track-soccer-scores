@@ -1,26 +1,47 @@
-git remote add origin https://github.com/voldo5/track-soccer-scores.git
+### Soccer scoreboard Web Application
+> Application displays the timer, live goals (score) and the history of goals (player number, player name and time of score) on the scoreboard. Button Play start the timer. When a goal is scored, we want both score and history to rerender at the same time. Goal is scored when we click on button Barselona or button Chelsea and we get at this moment score player name and time from timer for the history of goals.
+#### App with React, Typescript, antd. Using Observer pattern and Context hook.
+![alt](./src/assets/WeatherApp.jpg)
+### Key Words
+#### React: useState, useEffect, useReduce, useContext, useRef
+#### Custom Hooks: useFocus, useAppState, useGetWeather, useImmerReducer, useItemDrag, 
+#### useDrop, useDebounce
+#### Typescript: fetch, async, await, try, catch, destructuring, spread operator, rest operator, slice, date.toLocaleDateString
+#### API: Open Weather Api
+#### Icons: Weather icons, React icons, react-flag-icon-css
+#### Styled-components: react component, props
+#### CSS: flex, css grid, fluent typography, clamp, rem, vw, vh
+#### npm: use-immer, react-dnd, react-dnd-html5-backend, react-flag-icon-css, nanoid
+#### Installation from zero:
+```js
+npx create-react-app project1
+cd project1
+yarn add use-immer
+yarn add nanoid
+yarn add react-dnd@14.0.1 react-dnd-html5-backend@14.0.0
+yarn add react-icons
+yarn add react-flag-icon-css
+yarn start
+```
+#### Links:
+https://styled-components.com/
+https://react-icons.github.io/react-icons/
+https://github.com/erikflowers/weather-icons
+https://openweathermap.org/api
+https://www.npmjs.com/package/use-immer
+https://react-dnd.github.io/react-dnd/about
+#### Immer
+useImmer(initialState) is very similar to useState. When passing a function to the updater, the draft argument can be mutated freely, until the producer ends and the changes will be made immutable and become the next state.
+#### React DnD
+React DnD is a set of React utilities to help you build complex drag and drop interfaces while keeping your components decoupled.
 
-git add .
-git commit -m "Configure React app for deployment to GitHub Pages"
-git push origin master
+#### Task: <span style="color:blue"> Setup Less with create-react-app boilerplate, add Ant Design React UI library, get default variables from ant-design default.less file.</span>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-### `npm start`
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 # Soccer scoreboard project
-Application displays the timer, live goals (score) and the history of goals (player number, player name and time of score). Button Play start the timer. When a goal is scored, we want both score and history to rerender at the same time. Goal is scored when we click on button Barselona or button Chelsea and we get at this moment score player name and time from timer for the history of goals.
+> Application displays the timer, live goals (score) and the history of goals (player number, player name and time of score). Button Play start the timer. When a goal is scored, we want both score and history to rerender at the same time. Goal is scored when we click on button Barselona or button Chelsea and we get at this moment score player name and time from timer for the history of goals.
 
-![logger_and_toastify](/react/example2.observable_pattern--score-board.png)
-![alt](./src/assets/score-board.png.jpg)
+![alt](./src/assets/score-board.png)
 ## Observer pattern files
 The Observer pattern includes the gameObserver.tsx module as Subject (or Observable) and two modules GameScore.tsx and GoalHistory.tsx as observers.
 
@@ -447,5 +468,24 @@ git push -u -f origin master
 ```
 The -u switch makes the remote GitHub repo the default for your existing project. The -f switch forces Git to overwrite any files that already exist on GitHub with your existing project’s files.
 
+
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `npm start`
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `npm run build`
+
+git remote add origin https://github.com/voldo5/track-soccer-scores.git
+
+git add .
+git commit -m "Configure React app for deployment to GitHub Pages"
+git push origin master
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 
