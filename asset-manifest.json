@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/track-soccer-scores/static/css/main.2bef63d5.css",
+    "main.js": "/track-soccer-scores/static/js/main.4006dff9.js",
+    "static/media/fc-chelsea.svg": "/track-soccer-scores/static/media/fc-chelsea.22ad631b90d3405b18032d93b701d2ba.svg",
+    "static/media/fc-barcelona.svg": "/track-soccer-scores/static/media/fc-barcelona.31d0f2650f146cb07e87c9110e5e329f.svg",
+    "index.html": "/track-soccer-scores/index.html",
+    "main.2bef63d5.css.map": "/track-soccer-scores/static/css/main.2bef63d5.css.map",
+    "main.4006dff9.js.map": "/track-soccer-scores/static/js/main.4006dff9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2bef63d5.css",
+    "static/js/main.4006dff9.js"
+  ]
+}
